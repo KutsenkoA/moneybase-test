@@ -1,0 +1,21 @@
+<h1 aria-label="stock name">{{ stock.name }}</h1>
+
+<h2 class="price" aria-label="stock price">{{ stock.price | currency }}</h2>
+
+<div class="daily-price">
+  <h3>Daily High Price</h3>
+  <p aria-label="stock daily high price">{{ stock.highPrice | currency }}</p>
+
+  <h3>Daily Low Price</h3>
+  <p aria-label="stock daily low price">{{ stock.lowPrice | currency }}</p>
+</div>
+
+<div class="average-price">
+  <h3>52 Week High Price</h3>
+  <p aria-label="stock 52 week high price">{{ stock.high52WeekPrice | currency }}</p>
+
+  <h3>52 Week Low Price</h3>
+  <p aria-label="stock 52 week low price">{{ stock.low52WeekPrice | currency }}</p>
+</div>
+
+<ng-toggle [value]="!isDisabled" #toggle (change)="disabled.emit(!toggle.value)"></ng-toggle>

@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  border-radius: 1rem;
+  text-align: center;
+  width: 15rem;
+  padding: 1rem;
+  color: darkslategray;
+
+  &.stock-growth-color {
+    background: limegreen;
+  }
+
+  &.stock-falls-color {
+    background: lightcoral;
+  }
+
+  &.stock-disabled-color {
+    background: gray;
+  }
+
+  & h3 {
+    margin-block-end: 0;
+  }
+
+  & p {
+    margin-block-start: 0;
+  }
+}
+
+// Hide average prices for mobile devices
+@media screen and (max-width: 600px) {
+  .average-price {
+    display: none;
+  }
+}
+
+
+
+
